@@ -1,6 +1,10 @@
 <template>
     <lightning-card title="Lifecycle hook parent card">
+
+
         <div class="slds-var-m-around_medium">
+
+
             <template if:true={isChildVisible}>
                 <lightning-button
                 variant="brand"
@@ -9,6 +13,8 @@
                 onclick={handleClick} 
                 class="slds-var-m-left_x-small"></lightning-button>
             </template>
+
+
             <template if:false={isChildVisible}>
                 <lightning-button
              variant="brand"
@@ -17,9 +23,13 @@
              onclick={handleClick} 
              class="slds-var-m-left_x-small"></lightning-button>
             </template>
+
+
              <template if:true={isChildVisible}>
                 <c-chld-life-cycle-hook></c-chld-life-cycle-hook>
-             </template>            
+             </template>    
+             
+             
         </div>
     </lightning-card>
 </template>

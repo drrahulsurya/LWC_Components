@@ -1,6 +1,7 @@
 import { LightningElement } from 'lwc';
 
 export default class P2cParentComponent extends LightningElement {
+    
 
 carouselData=[
         {
@@ -25,4 +26,15 @@ carouselData=[
 },
         
     ]
+
+    inPercentage=30
+    handleChange(event)
+    {
+        this.inPercentage=event.target.value
+    }
+
+    handleClick()
+    {       
+        this.template.querySelector('c-slider-bar').resetSlider()
+    }
 }
